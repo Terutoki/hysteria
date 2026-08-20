@@ -470,7 +470,7 @@ func (c *clientConfig) fillQUICConfig(hyConfig *client.Config) error {
 		DisableChromeParrot:            c.QUIC.DisableChromeParrot,
 		// Mimic rewrites packets after they leave the socket, which corrupts
 		// every segment but the first of a GSO batch.
-		DisableGSO: c.Mimic.Enabled,
+		DisableGSO: true,
 	}
 	return nil
 }
