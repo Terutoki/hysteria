@@ -1182,7 +1182,7 @@ func (c *serverConfig) fillQUICConfig(hyConfig *server.Config) error {
 		MaxIncomingStreams:             c.QUIC.MaxIncomingStreams,
 		DisablePathMTUDiscovery:        c.QUIC.DisablePathMTUDiscovery,
 		// See the client side: Mimic and GSO are mutually exclusive.
-		DisableGSO: c.Mimic.Enabled,
+		DisableGSO: true,
 	}
 	return nil
 }
